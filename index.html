@@ -1,152 +1,239 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game-Mania</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.6.3.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container-grid cabecalho">
             <a href="/index.html"><img src="img/game mania.png" alt="Logo Game Mania"></a>
-            <nav class="menu">
+            <nav id="menu" class="menu">
                 <a href="">início</a>
-                <a href="/login.html">login</a>
-                <a href="">nossa história</a>
-                <a href="">produtos</a>
-                <a href="">localização</a>
-                <a href="">contato</a>
+                <a href="/login.html" target="_blank">login</a>
+                <a href="#" target="_blank">nossa história</a>
+                <a href="#" target="_blank">produtos</a>
+                <a href="#" target="_blank">localização</a>
+                <a href="#" target="_blank">contato</a>
             </nav>
+                <a onclick="mostrarMenu()" href="#" id="barras"><img class="icone-menu" src="./img/bars-solid.svg" alt="icone do menu de barras"></a>
+                <!-- <a href="#" id="menu"><img class="icone-menu" src="./img/bars-solid.svg" alt="icone do menu de barras"></a> -->
         </div>
     </header>
-    <main>
-        <section class="fundo">
-            <div class="posicionamentotexto">
-                <div class="espaco">
-                    <p>TODO O SITE COM ATÉ</p>
-                    <h1>10%</h1>
-                    <p>DE DESCONTO</p>
-                    <a href="#">inscreva-se</a>
+        <main>
+            <section id="carrossel" class="banner">
+                <div>
+                    <div class="conteudo-banner">
+                        <p>TODO O SITE COM ATÉ</p>
+                        <h1>10%</h1>
+                        <p>DE DESCONTO</p>
+                        <a href="#">saiba mais</a>
+                    </div>
+                </div>
+            </section>
+            <section class="campo-busca">
+                <div class="campo-busca" style="background-color: black;">
+                    <form class="novidades">
+                        <h2>novidades</h2>
+                        <input type="search" id="campo-busca" type="busca" placeholder="Faça sua busca">
+                    </form>
+                </div>
+            </section>
+            <section class="imagensjogos">
+                <img src="./img/god of war.jpeg" alt="Imagem God of War" height="450" width="750">
+                    <div>
+                        <img src="./img/Capturar.PNG" alt="need for speed underground 2" height="260" width="580">
+                            <h3>need for speed - underground 2</h3>
+                            <section>
+                            <h4> texto explicando os detalhes do jogo need for speed underground 2</h4>
+                            </section>
+                        <img class= "stars" src="./img/Gold-Star-PNG-Transparent-Image.png" alt="estrela 5 vezes" height="68" width="350">
+                    </div>
+            </section>
+                        <div class="container-nossosprodutos"  style="background-color: black;">
+                            <div class="nossosprodutos">
+                                <div class="nossosprodutos">
+                                    <h2>nossos produtos</h2>
+                                </div>
+                            </div>
+                        </div> 
+                        <section class="ofertas">
+                            <div class="container">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="containercard">
+                                        <div class="espaco-produtos">
+                                            <div class="cardnews">
+                                                <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                                    <div class="texto-card">
+                                                        <h3>controle x-box sem fio</h3>
+                                                        <p>descrição do controle sem fio</p>
+                                                        <h4>R$ 449,00</h4>
+                                                        <a href="#">comprar</a>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="containercard">
+                                    <div class="espaco-produtos">
+                                        <div class="cardnews">
+                                            <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                                <div class="texto-card">
+                                                    <h3>controle x-box sem fio</h3>
+                                                    <p>descrição do controle sem fio</p>
+                                                    <h4>R$ 449,00</h4>
+                                                    <a href="#">comprar</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="containercard">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="containercard">
+                            <div class="espaco-produtos">
+                                <div class="cardnews">
+                                    <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                        <div class="texto-card">
+                                            <h3>controle x-box sem fio</h3>
+                                            <p>descrição do controle sem fio</p>
+                                            <h4>R$ 449,00</h4>
+                                            <a href="#">comprar</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+                        <section class="ofertas">
+                            <div>                    
+                                <section class="participe">
+                                        <h2>Participe da liga game mania</h2>
+                                            <img src="./img/Grupo-1682.png" alt="imagem jogador online" height="240" width="225">
+                                        <form action="">
+                                            <input id="campoemail" type="email" placeholder="E-mail" required>
+                                            <button onclick="CadastrarNewsletter()">Cadastre-se</button>
+                                        </form>
+                                </section>
+                            </div>
+                            <div class="containercard">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="containercard">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            <div class="containercard">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="containercard">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="containercard">
+                                <div class="espaco-produtos">
+                                    <div class="cardnews">
+                                        <img class="controle-xbox" src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle-xbox" height="180" width="180">
+                                            <div class="texto-card">
+                                                <h3>controle x-box sem fio</h3>
+                                                <p>descrição do controle sem fio</p>
+                                                <h4>R$ 449,00</h4>
+                                                <a href="#">comprar</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section>
-            <img src="./img/logof1.png" alt="logo formula 1">
-            <img src="./img/need for speed.webp" alt="underground 2">
-            <img src="./img/counterstriky.jpg" alt="counter strike">
-        </section>
-        <section>
-            <h2>novidades</h2>
-            <br>
-            <img src="./img/god of war.jpeg" alt="Imagem God of War">
-            <img src="./img/Capturar.PNG" alt="need for speed underground 2">
-            <h3>need for speed - underground 2</h3>
-            <br>
-        </section>
-        <section>
-            <h3> texto explicando os detalhes do jogo need for speed underground 2</h3>
-        </section>
-        <img src="./img/Gold-Star-PNG-Transparent-Image.png" alt="estrela 5 vezes">
-        <img src="./img/Gold-Star-PNG-Transparent-Image.png" alt="estrela 5 vezes">
-        <img src="./img/Gold-Star-PNG-Transparent-Image.png" alt="estrela 5 vezes">
-        <img src="./img/Gold-Star-PNG-Transparent-Image.png" alt="estrela 5 vezes">
-        <img src="./img/Gold-Star-PNG-Transparent-Image.png" alt="estrela 5 vezes">
-        <section>
-            <img src="./img/Gamer-esport-mascot-logo-template-on-transparent-background-PNG.png">
-        </section>
-
-        <section>
-            <h2>nossos produtos</h2>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                    <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-                <img src="./img/controle-microsoft-xbox-sem-fio-branco-qas-00007_1601326573_gg.jpg" alt="controle xbox">
-                    <h3>controle x-box sem fio</h3>
-                        <p>descrição do controle sem fio</p>
-                        <p> R$ 000,00</p>
-                <a href="#">comprar</a>
-            <br>
-        </section>
-
-        <section>
-            <h2>Participe da liga game mania</h2>
-        </section>
-
-        <section>
-            <img src="./img/Grupo-1682.png" alt="imagem jogador online">
-        </section>
-
-        <section>
-            <a href="#">Cadastre-se aqui</a>
-        </section>
-
-        <section>
-            <img src="./img/whats.png" alt="logotipo flutuante whatsapp">
-        </section>
     </main>
-
-    <footer style="background-color: black;">
-            <img src="./img/email.png" alt="email png">
-            <img src="./img/Instagram_icon.png" alt="instagram logo png">
-            <img src="./img/Facebook_logo_(square).png" alt="facebook logo png">
-            <img src="./img/png-transparent-logo-logo-twitter-blue-cdr-logo.png" alt="twiter logo png">
-            <img src="./img/whatsapp-official-logo-png-download.png" alt="logotipo whatsapp">
-            <img src="./img/email.png" alt="email png">
-
-            <h2>links uteis</h2>
-                <ul>
-                    <li>Regras de Utilização</li>
-                    <li>Suporte</li>
-                    <li>Central de Ajuda</li>
-                    <li>contato</li>
+    <footer class="stilorodape">
+        <section>
+            <div>
+                <a href="#" id="instagram"><img class="logo-instagram-footer" src="img/instagram.svg" alt="logo-instagram-footer"></a>
+                <a href="#" id="facebook"><img class="logo-facebook-footer" src="img/facebook.svg" alt="logo-facebook-footer"></a>
+                <a href="#" id="twitter"><img class="logo-twitter-footer" src="img/twitter.svg" alt="logo-twitter-footer"></a>
+                <a href="#" id="whatsapp"><img class="logo-whatsaap-footer" src="img/whatsapp.svg" alt="logo-whatsaap-footer"></a>
+            </div>
+        </section>
+            <section>
+                <section class="links">
+                    <h2>links uteis</h2>
+                    <ul>
+                    <a href="#" id="Regras"><li>Regras de Utilização</li></a>
+                    <a href="#" id="Suporte"><li>Suporte</li></a>
+                    <a href="#" id="Ajuda"><li>Central de Ajuda</li></a>
+                    <a href="#" id="Contato"><li>Contato</li></a>
                 </ul>
-                <br>
-
+            </section>
+        </section>
     </footer>
-    
-</body>
-</html>
+
+    </body>
+    </html>
